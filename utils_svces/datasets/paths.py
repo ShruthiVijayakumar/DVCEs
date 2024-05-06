@@ -4,7 +4,8 @@ import os
 
 
 def get_base_data_dir():
-    path = '/scratch/datasets/'
+    #path = '/scratch/datasets/'
+    path = '/home/vijayaku/DVCEs/scratch/datasets/'
     return path
 
 def get_svhn_path():
@@ -67,7 +68,8 @@ def get_tiny_images_lmdb():
     raise NotImplementedError()
 
 def get_imagenet_path(data_folder=None):
-    path = os.path.join(get_base_data_dir(), 'imagenet')
+    #path = os.path.join(get_base_data_dir(), 'imagenet')
+    path = '/home/vijayaku/DVCEs/scratch/datasets/imagenet'
     return path
 
 def get_imagenet_o_path():

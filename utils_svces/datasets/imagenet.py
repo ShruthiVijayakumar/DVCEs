@@ -44,7 +44,8 @@ def get_ImageNet(path='', train=True, batch_size=None, shuffle=None, augm_type='
     if shuffle is None:
         shuffle = train
 
-    path += '/imagenet'
+    #path += '/imagenet'
+    path = '/home/vijayaku/DVCEs/scratch/datasets/imagenet'
 
     if train == True:
         dataset = datasets.ImageNet(path, split='train', transform=transform)

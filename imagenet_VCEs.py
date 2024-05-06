@@ -59,8 +59,8 @@ torch.manual_seed(hps.seed)
 random.seed(hps.seed)
 np.random.seed(hps.seed)
 
-in_labels = get_imagenet_labels(hps.data_folder)
-
+#in_labels = get_imagenet_labels(hps.data_folder)
+in_labels = get_imagenet_labels('/scratch/datasets/')
 in_loader = dl.get_ImageNet(path=hps.data_folder, train=False, augm_type='crop_0.875', size=img_size)
 in_dataset = in_loader.dataset
 
