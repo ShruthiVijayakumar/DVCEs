@@ -1,4 +1,5 @@
 /checkpoints/
 /ImageNet1000Models/
 /logs/*
+/scratch/*
 **/__pycache__/
