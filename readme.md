@@ -117,11 +117,10 @@ Before we can start with the generation, we have to setup the project and instal
 * and `wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt`
 
 
-* Set variable *data_folder* to the folder that contains imagenet dataset
-  For example, if your imagenet folder is located under '/scratch/datasets/imagenet', then use `data_folder='/scratch/datasets'`
+*create a folder 'scratch\datasets\imagenet' and place the externally downloaded imagenet validation dataset (val) and ILSVRC2012_devkit_t12.tar.gz inside imagenet. you can download validation dataset with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar --no-check-certificate` and ILSVRC2012_devkit_t12.tar.gz with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz --no-check-certificate`
 
-* Create a new conda env via `conda env create -f python_38_dvces.yml`
-* Activate the conda environment via `conda activate python_38_dvces`
+* Create a new conda env via `conda env create -f environment_py_38.yml`
+* Activate the conda environment via `conda activate environment_py_38`
 * Install additionally robustbench via `pip install git+https://github.com/RobustBench/robustbench.git`
 
 
@@ -132,18 +131,19 @@ In the following, we show, how to first set the parameters, and then - generate 
 For any of the proposed parameter settings, feel free to adjust the values, but these are the ones we have used mostly in the paper.
 
 * Generating DVCEs without cone projection for Madry + FT via
-  `python imagenet_VCEs.py --data_folder $data_folder --num_imgs 12 --denoise_dist_input > logs/log`  
+  `python imagenet_VCEs.py --num_imgs 12 --denoise_dist_input > logs/log`  
 
 * Generating DVCEs with the cone projection for Madry + FT and respectively Swin-T (model id is 30) and ConvNeXt (model id is 31) via
-  `second_classifier_ts=(31 30)`
-  and then
-  `for second_classifier_t in "${second_classifier_ts[@]}"; do python imagenet_VCEs.py --data_folder $data_folder --deg_cone_projection 30 --second_classifier_type $second_classifier_t --num_imgs 12 --denoise_dist_input --aug_num 16 > logs/log; done`
+  
+  `python imagenet_VCEs.py --deg_cone_projection 30 --second_classifier_type 30 --num_imgs 12 --denoise_dist_input --aug_num 16 > logs/log`
+  or
+  `python imagenet_VCEs.py --deg_cone_projection 31 --second_classifier_type 30 --num_imgs 12 --denoise_dist_input --aug_num 16 > logs/log`
 
 * Generating SVCEs for Madry + FT via
-  `python imagenet_VCEs.py --data_folder $data_folder --num_imgs 12 --config 'svce.yml' > logs/log` 
+  `python imagenet_VCEs.py --num_imgs 12 --config 'svce.yml' > logs/log` 
 
 * Generating blended diffusion based VCEs via
-  `python imagenet_VCEs.py --data_folder $data_folder --num_imgs 12 --config 'blended.yml' --use_blended --background_preservation_loss > logs/log` 
+  `python imagenet_VCEs.py --num_imgs 12 --config 'blended.yml' --use_blended --background_preservation_loss > logs/log` 
 
 The batchsize argument `--batch_size` is the number of samples per gpu, so if you encounter out-of-memory errors you can reduce it without altering results.
 
