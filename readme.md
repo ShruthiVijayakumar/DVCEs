@@ -110,19 +110,17 @@ Before we can start with the generation, we have to setup the project and instal
 * Start by extracting the content of the .zip file that also contains this readme.md somewhere on your computer. We will refer to the extraction directory as **project_path**.
 * Navigate into the  **project_path**
 
-* Download the weights for Madry + FT from [here](https://drive.google.com/file/d/1sUR81A5OckMS0maneU5KWOpc99rCtESR/view?usp=sharing) into your **project_path**
-* Unzip the model file via `unzip MadryFT.zip` 
+* Unzip the the weights for Madry + FT model file via `unzip MadryFT.zip` inside **project_path**
 
 * Execute `mkdir checkpoints; cd checkpoints`
 * and `wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt`
 
-
+* Navigate into the  **project_path**
 * Create a folder 'scratch\datasets\imagenet' and place the externally downloaded imagenet validation dataset (val) and ILSVRC2012_devkit_t12.tar.gz inside imagenet. you can download validation dataset with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar --no-check-certificate` and ILSVRC2012_devkit_t12.tar.gz with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz --no-check-certificate`
 
 * Create a new conda env via `conda env create -f environment_py_38.yml`
 * Activate the conda environment via `conda activate environment_py_38`
 * Install additionally robustbench via `pip install git+https://github.com/RobustBench/robustbench.git`
-
 
 ## Creating  DVCEs/SVCEs/blended diffusion based VCEs
 
