@@ -116,7 +116,7 @@ Before we can start with the generation, we have to setup the project and instal
 * and `wget https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt`
 
 * Navigate into the  **project_path**
-* Create a folder 'scratch\datasets\imagenet' and place the externally downloaded imagenet validation dataset (val) and ILSVRC2012_devkit_t12.tar.gz inside imagenet. you can download validation dataset with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar --no-check-certificate` and ILSVRC2012_devkit_t12.tar.gz with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz --no-check-certificate`
+* Inside folder 'scratch\datasets\imagenet', place the externally downloaded imagenet validation dataset (val) and ILSVRC2012_devkit_t12.tar.gz inside imagenet. you can download validation dataset with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar --no-check-certificate` and ILSVRC2012_devkit_t12.tar.gz with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz --no-check-certificate`
 
 * Create a new conda env via `conda env create -f environment_py_38.yml`
 * Activate the conda environment via `conda activate environment_py_38`
