@@ -118,7 +118,7 @@ Before we can start with the generation, we have to setup the project and instal
 * Navigate into the  **project_path**
 * Inside folder 'scratch\datasets\imagenet', place the externally downloaded imagenet validation dataset (val) and ILSVRC2012_devkit_t12.tar.gz inside imagenet. you can download validation dataset with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar --no-check-certificate` and ILSVRC2012_devkit_t12.tar.gz with command `wget https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz --no-check-certificate`
 
-* Create a new conda env via `conda env create -f environment_py_38.yml`
+* Create a new conda env by executing the following commands `module load anaconda3/latest`,`$ANACONDA_HOME/etc/profile.d/conda.sh`, `conda env create -f environment_py_38.yml`
 * Activate the conda environment via `conda activate environment_py_38`
 * Install additionally robustbench via `pip install git+https://github.com/RobustBench/robustbench.git`
 
