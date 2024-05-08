@@ -122,6 +122,7 @@ Before we can start with the generation, we have to setup the project and instal
 * Activate the conda environment via `conda activate environment_py_38`
 * Install additionally robustbench via `pip install git+https://github.com/RobustBench/robustbench.git`
 * Go to path .conda/envs/environment_py_38/lib/python3.8/site-packages/robustness/imagenet_models/vgg.py, .conda/envs/environment_py_38/lib/python3.8/site-packages/robustness/imagenet_models/squeezenet.py and .conda/envs/environment_py_38/lib/python3.8/site-packages/robustness/imagenet_models/alexnet.py and change the import library for load_state_dict_from_url from torchvision.models.utils to torch.hub
+* navigate to .conda/envs/environment_py_38/lib/python3.8/site-packages/robustbench/model_zoo/architectures/robustarch_wide_resnet.py and change the 'list' object to 'List' everywhere in the file
 * create a folder logs inside **project_path**
 
 ## Creating  DVCEs/SVCEs/blended diffusion based VCEs
