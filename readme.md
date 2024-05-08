@@ -121,6 +121,7 @@ Before we can start with the generation, we have to setup the project and instal
 * Create a new conda env by executing the following commands `module load anaconda3/latest`,`$ANACONDA_HOME/etc/profile.d/conda.sh`, `conda env create -f environment_py_38.yml`
 * Activate the conda environment via `conda activate environment_py_38`
 * Install additionally robustbench via `pip install git+https://github.com/RobustBench/robustbench.git`
+* Install also `python -m pip install torch==2.0.1+cu118 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
 * Go to path .conda/envs/environment_py_38/lib/python3.8/site-packages/robustness/imagenet_models/vgg.py, .conda/envs/environment_py_38/lib/python3.8/site-packages/robustness/imagenet_models/squeezenet.py and .conda/envs/environment_py_38/lib/python3.8/site-packages/robustness/imagenet_models/alexnet.py and change the import library for load_state_dict_from_url from torchvision.models.utils to torch.hub
 * navigate to .conda/envs/environment_py_38/lib/python3.8/site-packages/robustbench/model_zoo/architectures/robustarch_wide_resnet.py and change the 'list' object to 'List' everywhere in the file
 * create a folder logs inside **project_path**
