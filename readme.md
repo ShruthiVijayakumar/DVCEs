@@ -1,26 +1,107 @@
 # **Diffusion Visual Counterfactual Explanations**
 
-Welcome to the codebase for our NeurIPS paper *Diffusion Visual Counterfactual Explanations.* We will show you how to generate DVCEs on the selected (and you can choose the targets yourselves) ImageNet images with the multiple norm robust model Madry + FT and two SOTA **non-robust** models Swin-T and ConvNeXt. 
+This page is to reproduce the results as stated in the NeurIPS paper *Diffusion Visual Counterfactual Explanations.* The steps to generate DVCEs on the selected (and you can choose the targets yourselves) ImageNet images with the multiple norm robust model Madry + FT and two SOTA **non-robust** models Swin-T and ConvNeXt is shown. 
 
-## Examples of DVCEs for the **non-robust** ConvNeXt classifier
+## Examples of DVCEs without cone projection for Madry + FT
 
 In the following, first image is the starting image, `GT` stands for the "ground-truth label", and the images in the second and third columns - are VCEs in the respective target classes displayed above. For each the achieved and the initial confidences (`i`) are displayed above.
 
 <p align="center">
-  <img src="image_examples/0.png" />
+  <img src="ImageNetVCEs/examples/Madry + FT/0.png" />
 </p>
 <p align="center">
-  <img src="image_examples/2.png" />
+  <img src="ImageNetVCEs/examples/Madry + FT/2.png" />
 </p>
 <p align="center">
-  <img src="image_examples/4.png" />
+  <img src="ImageNetVCEs/examples/Madry + FT/4.png" />
 </p>
 <p align="center">
-  <img src="image_examples/8.png" />
+  <img src="ImageNetVCEs/examples/Madry + FT/8.png" />
 </p>
 <p align="center">
-  <img src="image_examples/10.png" />
+  <img src="ImageNetVCEs/examples/Madry + FT/10.png" />
 </p>
+
+## Examples of DVCEs with the cone projection for Madry + FT and  the **non-robust** Swin-T classifier
+
+In the following, first image is the starting image, `GT` stands for the "ground-truth label", and the images in the second and third columns - are VCEs in the respective target classes displayed above. For each the achieved and the initial confidences (`i`) are displayed above.
+
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry + FT _Swin-T/0.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry + FT _Swin-T/2.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry + FT _Swin-T/4.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry + FT _Swin-T/8.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry + FT _Swin-T/10.png" />
+</p>
+
+## Examples of DVCEs with the cone projection for Madry + FT and  the **non-robust** ConvNeXt classifier
+
+In the following, first image is the starting image, `GT` stands for the "ground-truth label", and the images in the second and third columns - are VCEs in the respective target classes displayed above. For each the achieved and the initial confidences (`i`) are displayed above.
+
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry+ FT_ConvNeXt/0.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry+ FT_ConvNeXt/2.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry+ FT_ConvNeXt/4.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry+ FT_ConvNeXt/8.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/Madry+ FT_ConvNeXt/10.png" />
+</p>
+
+## Examples of SVCEs for Madry + FT
+
+In the following, first image is the starting image, `GT` stands for the "ground-truth label", and the images in the second and third columns - are VCEs in the respective target classes displayed above. For each the achieved and the initial confidences (`i`) are displayed above.
+
+<p align="center">
+  <img src="ImageNetVCEs/examples/svces/0.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/svces/2.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/svces/4.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/svces/8.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/svces/10.png" />
+</p>
+
+## Examples of blended diffusion based VCEs
+
+In the following, first image is the starting image, `GT` stands for the "ground-truth label", and the images in the second and third columns - are VCEs in the respective target classes displayed above. For each the achieved and the initial confidences (`i`) are displayed above.
+
+<p align="center">
+  <img src="ImageNetVCEs/examples/blended_diffuion/0.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/blended_diffuion/2.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/blended_diffuion/4.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/blended_diffuion/8.png" />
+</p>
+<p align="center">
+  <img src="ImageNetVCEs/examples/blended_diffuion/10.png" />
+</p>
+
 
 ## Setup
 
