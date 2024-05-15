@@ -15,7 +15,9 @@ def get_fundusKaggle_path(background_subtraction=False):
     return ''
 
 def get_CIFAR10_path():
-    return os.path.join(get_base_data_dir(),  'CIFAR10')
+    #return os.path.join(get_base_data_dir(),  'CIFAR10')
+    path = '/home/vijayaku/DVCEs/scratch/datasets/cifar'
+    return path
 
 def get_CIFAR100_path():
     return os.path.join(get_base_data_dir(),  'CIFAR100')

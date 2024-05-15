@@ -100,7 +100,7 @@ def celebA_feature_set(split='train', shuffle=None, batch_size=128, attributes=N
     augm = get_celebA_augmentation(augm_type, out_size=out_size, config_dict=augm_config)
 
     path = get_celebA_path()
-    dataset = datasets.CelebA(path, split=split, target_type='attr', transform=augm, target_transform=target_transform, download=False )
+    dataset = datasets.CelebA('/home/vijayaku/DVCEs/scratch/datasets/', split=split, target_type='attr', transform=augm, target_transform=target_transform, download=False )
 
     loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size,
                                          shuffle=shuffle, num_workers=8)
